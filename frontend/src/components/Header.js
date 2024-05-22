@@ -3,7 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import { ReactComponent as Logo } from '../images/logo.svg';
 
 const navbarStyle = {
-  backgroundColor: 'AntiqueWhite',
+  backgroundColor: 'MintCream',
 };
 
 //const Header = (props) => {
@@ -12,7 +12,7 @@ const Header = ({ title }) => {
   return (
     <Navbar style={navbarStyle} data-bs-theme="light">
       <Container>
-        <Logo style={{ maxWidth: '12rem', maxHeight: '2rem' }} />
+        <Logo alt={title} style={{ maxWidth: '12rem', maxHeight: '2rem' }} />
       </Container>
     </Navbar>
   );

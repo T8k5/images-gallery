@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
 //import ImageCard from './components/ImageCard';
-import cards from './components/Cards';
+import Cards from './components/Cards';
+import Welcome from './components/Welcome';
 //import { Container, Row, Col } from 'react-bootstrap';
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
@@ -32,7 +33,11 @@ const App = (e) => {
     <div>
       <Header title="Images Gallery" />
       <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
-      {cards({ images, setImages })}
+      {images.length > 0 ? (
+        <Cards images={images} setImages={setImages} />
+      ) : (
+        <Welcome />
+      )}
     </div>
   );
 };

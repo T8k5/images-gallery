@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import ImageCard from './ImageCard';
 
-const cards = ({ images, setImages }) => {
+const Cards = ({ images, setImages }) => {
   const handleDeleteImage = (id) => {
     setImages(images.filter((image) => image.id !== id));
   };
@@ -19,4 +19,4 @@ const cards = ({ images, setImages }) => {
   );
 };
 
-export default cards;
+export default Cards;
